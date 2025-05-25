@@ -9,8 +9,8 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
-    def open_dangki(self):
-        from dangki import Ui_MainWindow_2  # CHUYỂN VÀO TRONG HÀM
+    def open_dangki2(self):
+        from dangki2 import Ui_MainWindow_2  # CHUYỂN VÀO TRONG HÀM
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_MainWindow_2()
         self.ui.setupUi(self.window)

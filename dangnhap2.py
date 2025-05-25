@@ -10,6 +10,22 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 
 class Ui_MainWindow(object):
+    def open_dangki2(self):
+        from dangki2 import Ui_MainWindow_2  # CHUYỂN VÀO TRONG HÀM
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_MainWindow_2()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+    def open_trangchu(self):
+        email = self.txtEmail.text()
+        password = self.txtPassword.text()
+        if email == 'Admin' and password == 'Admin':
+         from trangchu import CarManager
+         self.window = CarManager()
+         self.window.show()
+        else:
+         QtWidgets.QMessageBox.warning(None, "Lỗi", "Email hoặc mật khẩu không đúng!") 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)

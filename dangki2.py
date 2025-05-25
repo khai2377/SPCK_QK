@@ -18,10 +18,10 @@ class Ui_MainWindow_2(object):
         self.window.show()
     
     def open_trang_chu(self):
-     email_2 = self.lineEdit_2.text()
-     password_2 = self.lineEdit_3.text()
-     password_3 = self.lineEdit_4.text()
-     if email_2 == 'Admin' and password_2 == 'Admin' and password_3 == 'Admin':
+     txtEmail = self. txtEmail.text()
+     txtPassword = self.txtPassword.text()
+     txtRepassword = self.txtRepassword.text()
+     if txtEmail == 'Admin' and txtPassword == 'Admin' and txtRepassword == 'Admin':
         from trangchu import CarManager
         self.window = CarManager()
         self.window.show()
@@ -155,7 +155,7 @@ class Ui_MainWindow_2(object):
         self.txtRepassword.setObjectName("txtRepassword")
         self.verticalLayout_5.addWidget(self.txtRepassword)
         self.verticalLayout_3.addWidget(self.widget_5)
-        self.btn_login_2 = QtWidgets.QPushButton(parent=self.widget_2)
+        self.btn_login_2 = QtWidgets.QPushButton(parent=self.widget_2,clicked=lambda:self.open_dangnhap())
         self.btn_login_2.setEnabled(True)
         font = QtGui.QFont()
         font.setFamily("Arial")
@@ -174,7 +174,7 @@ class Ui_MainWindow_2(object):
         self.widget_6.setObjectName("widget_6")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.widget_6)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.btn_register_2 = QtWidgets.QPushButton(parent=self.widget_6)
+        self.btn_register_2 = QtWidgets.QPushButton(parent=self.widget_6,clicked=lambda:self.open_trang_chu())
         self.btn_register_2.setMinimumSize(QtCore.QSize(80, 30))
         self.btn_register_2.setMaximumSize(QtCore.QSize(150, 50))
         font = QtGui.QFont()
@@ -217,7 +217,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = Ui_MainWindow_2()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec())
