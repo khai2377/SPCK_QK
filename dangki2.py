@@ -10,8 +10,8 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 
 class Ui_MainWindow_2(object):
-    def open_dangnhap(self):
-        from dangnhap import Ui_MainWindow  # CHUYỂN VÀO TRONG HÀM
+    def open_dangnhap2(self):
+        from dangnhap2 import Ui_MainWindow  # CHUYỂN VÀO TRONG HÀM
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.window)
@@ -155,7 +155,7 @@ class Ui_MainWindow_2(object):
         self.txtRepassword.setObjectName("txtRepassword")
         self.verticalLayout_5.addWidget(self.txtRepassword)
         self.verticalLayout_3.addWidget(self.widget_5)
-        self.btn_login_2 = QtWidgets.QPushButton(parent=self.widget_2,clicked=lambda:self.open_dangnhap())
+        self.btn_login_2 = QtWidgets.QPushButton(parent=self.widget_2,clicked=lambda:self.open_dangnhap2())
         self.btn_login_2.setEnabled(True)
         font = QtGui.QFont()
         font.setFamily("Arial")
