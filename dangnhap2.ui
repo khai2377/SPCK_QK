@@ -52,7 +52,7 @@ border-radius:15px;</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>logoquangkhaicar.png</pixmap>
+        <pixmap>ảnh/logoquangkhaicar.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
