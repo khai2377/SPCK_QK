@@ -21,7 +21,7 @@ class Ui_MainWindow_2(object):
      txtEmail = self. txtEmail.text()
      txtPassword = self.txtPassword.text()
      txtRepassword = self.txtRepassword.text()
-     if txtEmail == 'Admin' and txtPassword == 'Admin' and txtRepassword == 'Admin':
+     if txtEmail == 'Admin.gmail' and txtPassword == '1234' and txtRepassword == '1234':
         from trangchu import CarManager
         self.window = CarManager()
         self.window.show()

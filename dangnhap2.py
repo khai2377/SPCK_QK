@@ -16,16 +16,15 @@ class Ui_MainWindow(object):
         self.ui = Ui_MainWindow_2()
         self.ui.setupUi(self.window)
         self.window.show()
-
     def open_trangchu(self):
         email = self.txtEmail.text()
         password = self.txtPassword.text()
-        if email == 'Admin' and password == 'Admin':
+        if email == 'Admin.gmail' and password == '1234':
          from trangchu import CarManager
          self.window = CarManager()
          self.window.show()
         else:
-         QtWidgets.QMessageBox.warning(None, "Lỗi", "Email hoặc mật khẩu không đúng!") 
+         QtWidgets.QMessageBox.warning(None, "Lỗi", "Email hoặc mật khẩu không đúng!")
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
@@ -44,7 +43,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(parent=self.widget_3)
         self.label.setMaximumSize(QtCore.QSize(400, 300))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("logoquangkhaicar.png"))
+        self.label.setPixmap(QtGui.QPixmap("ảnh/logoquangkhaicar.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.verticalLayout_2.addWidget(self.label)
@@ -129,7 +128,7 @@ class Ui_MainWindow(object):
         self.txtPassword.setObjectName("txtPassword")
         self.verticalLayout_5.addWidget(self.txtPassword)
         self.verticalLayout_3.addWidget(self.widget_5)
-        self.btn_register = QtWidgets.QPushButton(parent=self.widget_2,clicked=self.open_dangki2)
+        self.btn_register = QtWidgets.QPushButton(parent=self.widget_2,clicked=lambda:self.open_dangki2())
         self.btn_register.setEnabled(True)
         font = QtGui.QFont()
         font.setFamily("Arial")
@@ -148,7 +147,7 @@ class Ui_MainWindow(object):
         self.widget_6.setObjectName("widget_6")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.widget_6)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.btn_login = QtWidgets.QPushButton(parent=self.widget_6,clicked=self.open_trangchu)
+        self.btn_login = QtWidgets.QPushButton(parent=self.widget_6,clicked=lambda:self.open_trangchu())
         self.btn_login.setMinimumSize(QtCore.QSize(80, 30))
         self.btn_login.setMaximumSize(QtCore.QSize(150, 50))
         font = QtGui.QFont()
