@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
     def open_trangchu(self):
         email = self.txtEmail.text()
         password = self.txtPassword.text()
-        if email == 'Admin.gmail' and password == '1234':
+        if email == '@Admin.gmail' and password == '1234':
          from trangchu import CarManager
          self.window = CarManager()
          self.window.show()
